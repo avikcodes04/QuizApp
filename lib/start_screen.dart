@@ -19,7 +19,7 @@ class StartScreen extends StatelessWidget {
             ),
             SizedBox(height: 80,),
           Text(
-            'Learn Flutter the fun way!',
+            'Learn AI the fun way!',
             textAlign: TextAlign.center,
             style: GoogleFonts.climateCrisis(
               color: const Color.fromARGB(255, 235, 230, 239),

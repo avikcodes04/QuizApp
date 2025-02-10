@@ -24,12 +24,18 @@ void chooseAnswer(String answer){
   selectedAnswers.add(answer);
   if (selectedAnswers.length == questions.length) {
     setState(() {
-      selectedAnswers=[];
+      // selectedAnswers=[];
       activeScreen = 'results-screen';
     });
     
   }
 }
+  void restartQuiz(){
+    setState(() {
+      selectedAnswers=[];
+      activeScreen='question-screen';
+    });
+  }
 
   @override
   Widget build(context) {
@@ -41,7 +47,7 @@ void chooseAnswer(String answer){
       );
     }
     if (activeScreen == 'results-screen') {
-      screenWidget=ResultsScreen();
+      screenWidget=ResultsScreen(chosenAnswers: selectedAnswers, onRestart: restartQuiz,);
     }
     
 
